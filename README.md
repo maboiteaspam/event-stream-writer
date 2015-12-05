@@ -14,24 +14,23 @@ var flower = require('flower');
 var streamA = flower();
 var streamB = flower();
 
-streamB.on('data', function (d) {
-  console.log(d)
-});
+var eventStream = require('./index')
 
-var eventStreamWriter = require('./index')
-var writer = eventStreamWriter();           // eventStreamWriter is a function.
+var writer = eventStream('data', streamA);  // event-stream-writer is a stream,
+                                            // which writes specific event emitted
+                                            // by a foreign stream on itself.
                                             //
-                                            // Which produces object {
-streamA.on('data', writer.stdin)            //  stdin: event listener handle
-writer.stdout.pipe(streamB);                //  stout: stream of events
-                                            // }
+writer.pipe(streamB);                       // It s a stream to pipe then process events.
                                             //
-streamA.write('hello the world')            // It helps to pipe events
-                                            // of a stream into another one.
+streamB.on('data', function (d) {           // As a result streamB will emit streamA 'data' events.
+  console.log(d)                            // As if they was piped directly.
+});
                                             //
-                                            // Currently when streamA emits data,
-                                            // the event argument is piped to streamB.
-                                            //
+streamA.write('hello the world')            // write a data into streamA,
+                                            // to trigger its 'data' event,
+                                            // which event-stream-writer pipes into streamB,
+                                            // which then emits 'data' event itself,
+                                            // as a regular stream.
 ```
 
 #### How i use that ?

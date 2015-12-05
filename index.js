@@ -1,10 +1,11 @@
 
 var flower = require('flower')
 
-module.exports = function eventStreamWriter () {
+module.exports = function eventStreamWriter (event, streamEmitter) {
   var stream = flower();
-  return {
-    stdin: function(chunk) { stream.write(chunk); },
-    stdout: stream
-  }
+
+  streamEmitter.on(event, function (chunk) {
+    stream.write(chunk);
+  })
+  return stream;
 };
