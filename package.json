@@ -1,12 +1,15 @@
 {
   "name": "event-stream-writer",
   "version": "1.0.0",
-  "description": "",
+  "description": "An event handler to write in a stream",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "event",
+    "stream"
+  ],
+  "author": "maboiteaspam",
+  "license": "WTF"
 }
