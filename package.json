@@ -11,5 +11,8 @@
     "stream"
   ],
   "author": "maboiteaspam",
-  "license": "WTF"
+  "license": "WTF",
+  "dependencies": {
+    "flower": "maboiteaspam/flower"
+  }
 }
