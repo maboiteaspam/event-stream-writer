@@ -21,6 +21,6 @@
   "author": "maboiteaspam",
   "license": "WTF",
   "dependencies": {
-    "flower": "@maboiteaspam/flower"
+    "@maboiteaspam/flower": "^2.0.0"
   }
 }
