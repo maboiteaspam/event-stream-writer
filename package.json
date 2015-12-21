@@ -1,6 +1,6 @@
 {
   "name": "@maboiteaspam/event-stream-writer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An event handler to write in a stream",
   "main": "index.js",
   "scripts": {
