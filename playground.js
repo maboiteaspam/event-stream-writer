@@ -1,5 +1,5 @@
 
-var flower = require('flower');
+var flower = require('@maboiteaspam/flower');
 
 var streamA = flower();
 var streamB = flower();

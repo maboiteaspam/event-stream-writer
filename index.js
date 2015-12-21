@@ -1,5 +1,5 @@
 
-var flower = require('flower')
+var flower = require('@maboiteaspam/flower')
 
 module.exports = function eventStreamWriter (event, streamEmitter) {
   var stream = flower();

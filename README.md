@@ -4,7 +4,7 @@ An event handler to write in a stream.
 
 ## Install
 
-	npm i maboiteaspam/event-stream-writer --save
+	npm i @maboiteaspam/event-stream-writer --save
 
 ## Usage
 
@@ -46,3 +46,5 @@ You can see it in action in `npi`
 
 - https://github.com/maboiteaspam/npi
 - https://github.com/maboiteaspam/bubbled
+- https://github.com/maboiteaspam/flower
+- https://github.com/maboiteaspam/bubbler
